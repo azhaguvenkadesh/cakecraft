@@ -1,0 +1,93 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/* Ensure the cover image container takes full width and height */
+.coverimage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Use full width */
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.coverimage img {
+    width: 100%; /* Use full width */
+    height: 100%; /* Use full height */
+    object-fit: cover; /* Cover ensures the image covers the container */
+    object-position: center; /* Center the image */
+}
+
+/* Title styling */
+.title {
+    position: absolute;
+    color: #000000;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.content {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.content h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Adjusted contact footer styling */
+.contact {
+    padding: 10px;
+    width: 100%;
+    margin: 20px auto 0;
+    background-color: #454545; /* Dark background color */
+    color: #ffffff; /* Explicitly set text color to white */
+    border-radius: 5px;
+    height: auto; /* Adjust height to fit content */
+    min-height: 50px; /* Minimum height for the footer */
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+    color: #ffffff; /* Ensure heading color is white */
+}
+
+.contact p {
+    margin-bottom: 5px;
+    color: #ffffff; /* Ensure paragraph color is white */
+}
