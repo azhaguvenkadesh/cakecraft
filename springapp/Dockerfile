@@ -14,7 +14,7 @@ COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
 
 # Expose the port your Spring Boot application is running on
-EXPOSE 80
+EXPOSE 8080
 
 # Define the command to run when the container starts
 CMD ["/app/start.sh"]
