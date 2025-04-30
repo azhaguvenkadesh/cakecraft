@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Spring Boot App (JAR)
         run: |
-          ./mvnw clean package -DskipTests
+          ./mvn clean package -DskipTests
 
       - name: Trigger Render Deploy Hook
         run: |
