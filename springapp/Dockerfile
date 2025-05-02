@@ -3,6 +3,11 @@ FROM openjdk:latest
 
 # Set the working directory inside the container
 WORKDIR /app
+ 
+# Set environment variables
+ENV DB_URL=jdbc:mysql://crossover.proxy.rlwy.net:12392/railway?createDatabaseIfNotExist=true
+ENV DB_USERNAME=root
+ENV DB_PASSWORD=oNdXqpatVqAhnMrHmzMIvEKMrmtdPXuI
 
 # Copy the Spring Boot JAR file into the container
 COPY target/springapp-0.0.1-SNAPSHOT.jar /app/app.jar
