@@ -10,6 +10,8 @@ name: Java CI with Maven
 
 on:
   push:
+    tags:
+      - 'v*'
     branches:
       - main
   pull_request:
@@ -46,6 +48,7 @@ jobs:
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
+        tag_name: ${{ github.ref_name }}
         files: springapp/target/*.jar
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
