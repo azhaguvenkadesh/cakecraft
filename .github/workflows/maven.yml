@@ -51,4 +51,4 @@ jobs:
         tag_name: ${{ github.ref_name }}
         files: springapp/target/*.jar
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT_SECRET }}
