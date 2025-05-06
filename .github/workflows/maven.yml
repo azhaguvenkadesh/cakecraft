@@ -34,6 +34,12 @@ jobs:
       working-directory: springapp
       run: ls -lh target/*.jar
 
+    - name: Upload jar artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: springboot-jar
+        path: springapp/target/*.jar
+
     - name: Upload Release Asset
       uses: softprops/action-gh-release@v2
       with:
