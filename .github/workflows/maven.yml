@@ -10,9 +10,8 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -34,3 +33,10 @@ jobs:
     - name: List jar files in target folder
       working-directory: springapp
       run: ls -lh target/*.jar
+
+    - name: Upload Release Asset
+      uses: softprops/action-gh-release@v2
+      with:
+        files: springapp/target/*.jar
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
