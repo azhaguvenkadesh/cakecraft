@@ -31,6 +31,6 @@ jobs:
       working-directory: springapp
       run: mvn clean package
 
-    - name: List jar files in target/
-        working-directory: springapp
-        run: ls -lh target/*.jar
+    - name: List jar files in target folder
+      working-directory: springapp
+      run: ls -lh target/*.jar
